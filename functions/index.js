@@ -1,7 +1,7 @@
 const express = require('express');
 const cors =require('cors')
 const serverless = require('serverless-http');
-const dailyChallengesRouter = require('../router/dailyChallengesRouter');
+
 
 const app = express();
 app.use(cors());
@@ -10,10 +10,11 @@ const router = express.Router();
 
 const scheduleRouter = require('../router/scheduleRoute');
 const ratingRouter = require('../router/ratingRouter');
+// const dailyChallengesRouter = require('../router/dailyChallengesRouter');
 
 router.use('/schedule', scheduleRouter);
 router.use('/ranking', ratingRouter);
-router.use('/dailyChallenges',dailyChallengesRouter);
+// router.use('/dailyChallenges',dailyChallengesRouter);
 
 router.get('/', (req,res) => {
     res.send("You are in default Rought")
