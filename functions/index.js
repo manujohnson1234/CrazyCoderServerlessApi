@@ -1,6 +1,7 @@
 const express = require('express');
 const cors =require('cors')
 const serverless = require('serverless-http');
+const dailyChallengesRouter = require('../router/dailyChallengesRouter');
 
 const app = express();
 app.use(cors());
